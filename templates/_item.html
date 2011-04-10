@@ -1,0 +1,14 @@
+<!-- since_id:{{ since_id }} -->
+{% for d in data %}
+<div class="photo-container">
+    <a href="{{ d.url }}" target="_blank" rel="tooltip" title="{{ d.twitter_message }} <br />from {{ d.twitter_name }}" >
+    <!--<img src="/img/{{ d.key() }}" width="100" height="100" class="photo-thumbnail" />-->
+    
+<span class="rounded-img" style="background: url(/img/{{ d.key() }}) no-repeat center center; width: 100px; height: 100px;">
+<img src="/img/{{ d.key() }}" style="opacity: 0;" />
+</span>
+    
+    </a>
+</div>
+
+{% endfor %}

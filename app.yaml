@@ -1,0 +1,34 @@
+application: flow-img
+version: 1
+runtime: python
+api_version: 1
+
+builtins:
+- appstats: on
+- remote_api: on
+- datastore_admin: on
+
+admin_console:
+  pages:
+  - name: Appstats
+    url: /_ah/stats/
+
+handlers:
+
+- url: /favicon.ico
+  static_files: static/img/favicon.ico
+  upload: static/img/favicon.ico
+
+- url: /static
+  static_dir: static
+
+- url: /tasks/getData
+  script: get_data.py
+  login: admin
+
+- url: /tasks/deleteOldData
+  script: delete_old_data.py
+  login: admin
+
+- url: /.*
+  script: boot.py

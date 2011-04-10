@@ -1,0 +1,10 @@
+cron:
+- description: every minutes job
+  url: /tasks/getData
+  schedule: every 1 minutes
+  timezone: Asia/Tokyo
+
+- description: every hours job
+  url: /tasks/deleteOldData
+  schedule: every 1 hours
+  timezone: Asia/Tokyo

@@ -1,0 +1,5 @@
+*.pyc
+*.swo
+.DS_Store
+twitter_settings.py
+
